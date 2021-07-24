@@ -1,24 +1,3 @@
-iBiography is a web application that allows a single person to manage biographies of people playing
+iBiography is a web application that allow to manage biographies of people playing
 (or have played) important role in the IT field over the years.
-
-The application requires a login and a password to update its content but can be viewed staticly
-by other peoples.
-
-The application support Markdown formatting when adding content using
-Flask-Markdown.
-
-The application also contains a MyContacts section :)
-
-When adding a new biography, the user must provide a picture of the character, a short biography, a
-long one, his nationality(for archiving) and some icones representating his work.
-
-There is a home page that displays the most viewed biographies.
-There is an archive section divided into three parts: by date, by nationality, and by category of contribution/work
-
-The user/viewer/visitor can change the language of the application.
-
-The database used is sqlite. 
-
-The app is not intendend to look pretty. I'll use my project's css.
-
-Need to check the input datas.
+I started this project for learning Flask.
