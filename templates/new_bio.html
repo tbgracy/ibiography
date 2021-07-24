@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Nouvelle biographie
+{% endblock %}
+
+{% block body %}
+<h2>Nouvelle iBiographie</h2>
+
+<form action="/add" method="POST" enctype="multipart/form-data">
+    <fieldset id="picture"><legend>Photo</legend>
+        <input type="file" name="picture">
+    </fieldset>
+    <fieldset id="resume"><legend>Résumé</legend>
+        <ul>
+            <li><label>Nom complet<input type="text" name="fullname"></label></li>
+            <li><label>Date de naissance<input type="date" name="birthdate"></label></li>
+            <li><label>Décès<input type="date" name="deathdate"></label></li>
+            <li><label>Nationalité<input type="text" name="nationality"></label></li>
+            <!-- <li><label>Formation</label></li>
+            <li><label>Activités</label></li> -->
+            <li><label>Père</label><input type="text" name="father"></li>
+            <li><label>Mère</label><input type="text" name="mother"></li>
+            <li><label>Site web<input type="url" name="website"></label></li>
+            <li><label>Petite description<input type="text" name="short_description" placeholder="Decrivez en une phrase ce personnage" width="50"></label></li>
+            <!-- <li><label>Oeuvres principales</label></li> -->
+        </ul>
+        <!-- <table>
+            <tr>
+                <td>Nom complet</td>
+                <td><input type="text" name="fullname" id=""></td>
+            </tr>
+                <td>Date de naissance</td>
+                <td><input type="date" name="birthdate"></td>
+            <tr>
+                <td>Décès</td>
+                <td><input type="date" name="deathdate"></td>
+            </tr>
+            <tr></tr>
+                <td>Nationalité</td>
+                <td><input type="text" name="nationality" id=""></td>
+            <tr></tr>
+        </table> -->
+    </fieldset>
+    <br>
+    <fieldset id="longbio">
+        <legend>Biographie complète (ou pas)</legend>
+        <textarea name="long_bio"></textarea>
+    </fieldset>
+        <input type="submit" value="Ajouter biographie">
+</form>
+{% endblock %}

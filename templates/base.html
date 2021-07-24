@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+    <h1>iBiographies<!--&#128214--></h1>
+        <h2>Biographies des géants de l'<abbr title="Information Technology">IT</abbr></h2>
+            <nav>
+                <ul>
+                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="/archives/alphabet">Archives</a></li>
+                    <li><a href="/add">Ajouter</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div class="page_content">
+   {% block body %} 
+   {% endblock %}
+    </div>
+</body>
+</html>

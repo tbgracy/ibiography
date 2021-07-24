@@ -1,0 +1,353 @@
+/* FONTS FONTS FONTS FONTS */
+@font-face {
+	font-family: 'Ubuntu';
+	src: url(fonts/Ubuntu-R.ttf);
+}
+@font-face {
+	font-family: 'Quicksand';
+	src: url(fonts/Quicksand-Regular.otf);
+}
+@font-face {
+	font-family: "Abhaya Libre";
+	src: url(fonts/AbhayaLibre-Regular.ttf);
+}
+
+body {
+	font-family: "Quicksand";
+}
+p, .short_description{
+	font-family: "Abhaya Libre";
+}
+/******************************/
+
+body {
+	background-image: linear-gradient(rgba(100, 100, 100, .1), rgba(100,100,100,.1)), url(images/bg.png);
+	background-image: url(images/bg.png);
+	font-size: 100%;
+}
+ul {
+	list-style-type: none;
+}
+
+/****** COLORS ****************/
+
+/******************************/
+
+
+/****************** HEADER ********************/
+header {
+	padding: 2em;
+	position: relative;
+	border-bottom: black .35em solid;
+	background-image: 
+		linear-gradient(to right,rgb(14, 8, 22) 10%,rgb(14,8,22, .8), rgb(14, 8, 22, .8), rgb(14, 8, 22) 90%),
+		/* linear-gradient(rgb(236, 87, 104, .8), rgb(236, 87, 104, .8)), */
+		/* linear-gradient(rgb(78, 197, 193, .8), rgb(78, 197, 193, .8)), */
+		url(images/headbg2.jpg);
+	/* background-position: center; */
+	margin: -0.47em;
+	margin-bottom: 0;
+}
+
+header h1, header h2 {
+	color: white;
+	text-align: center;
+	letter-spacing: .2em;
+	text-shadow: #c00 .07em .07em .2em;
+}
+
+header h2 {
+	font-variant: small-caps;
+	letter-spacing: normal;
+	text-shadow: none;
+}
+
+nav ul {
+	position: absolute;
+	top: 85%;
+	left: 0;
+}
+
+nav li{
+	/* background-color: #c00; */
+	margin: .2em;
+	padding: .2em;
+	text-align: center;
+	/* border-radius: .3em; */
+	/* border: #c00 solid; */
+
+}
+
+nav li {
+	margin-bottom: .7em;
+}
+
+nav li a {
+	color: white;
+	text-decoration: none;
+	font-family: Ubuntu;
+	font-size: larger;
+	background-color: #c00;
+	padding: .2em;
+	border: #c00 solid;
+	border-radius: .3em;
+	transition-property: all;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+}
+
+nav li a:hover, nav li a:focus {
+	background-color: white;
+	color: #c00;
+}
+/*******************HEADER*******************/
+/********************************************/
+
+/**************** CONTENT ******************/
+img[alt="photo du mec"] {
+	width: 40%;
+	height: 40%;	
+}
+
+strong {
+	color: red;
+	font-weight: bold;
+	font-size: 1.3em;
+	border: 2px dashed red;
+	display: block;
+	text-align: justify;
+	text-indent: 0;
+	padding: .5em;
+}
+
+.page_content {
+	background-color: white;
+	border: #2f4f4f solid 1.5px;
+	border-top: #2f4f4f solid;
+	box-shadow: 0 0.5px .20em #2f4f4f;
+	width: 60%;
+	margin-left: 15%;
+	margin-bottom: 1em;
+	padding: 2em 5%;
+	/* padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2em;
+	margin-top: -5.2%; */
+	position: relative;
+	float: left;
+}
+
+.page_content h2 {
+	position: absolute;
+	background-color: #2f4f4f;
+	border-radius: .3em .3em 0 0;
+	padding: .4em;
+	padding-top: .2em;
+	color: white;
+	top: -2.7em;	
+	right: .2em;
+	font-size: 1.15em;
+}
+/********************************************/
+
+/************* ARCHIVE NAVIGATION **************/
+.archive-nav {
+	position: absolute;
+	top: -2.65em;
+	left: -2em;
+}
+
+.archive-nav li {
+	display: inline;
+	background-color: #2f4f4f;
+	padding: .2em;
+	padding-top: .01em;
+	border-radius: .3em .3em 0 0;
+	border: #2f4f4f solid;
+	/* border-bottom: none; */
+	font-family: Ubuntu;
+}
+
+.archive-nav li a {
+	color: white;
+	text-decoration: none;
+}
+.archive-nav li a:hover, .archive-nav li a:focus {
+	text-decoration: underline;
+}
+
+.archive-nav .onglet-actif {
+	background-color: white;
+	border-bottom: white solid;
+	padding-bottom: .35em;
+}
+.archive-nav .onglet-actif a {
+	color: #2f4f4f;
+}
+/***********************************************/
+
+.pays {
+	color: #2f4f4f;
+}
+
+/*************** MINIATURES *****************/
+.miniature a img {
+	width: 100px;
+	height: 100px;
+	border: #0e0816 solid;
+	border-radius: 1em 0;
+}
+
+.miniature .icone {
+	float: right;
+	margin-right: .5em;
+}
+.miniature .icone li{
+	display: inline;
+	margin: 1em;
+}
+.icone img {
+	clip-path: circle(50% at 50% 50%);
+	width: 30px;
+	height: 30px;
+}
+ 
+.miniature a {
+	color: #c00;
+	font-family: Ubuntu;
+	text-decoration: none;
+}
+.miniature a:hover, .miniature a:focus {
+	text-decoration: underline;
+}
+
+.miniature {
+	position: relative;
+	padding: .5em;
+	padding-top: .2em;
+	background-color: #0e0816;
+	border: #0e0816 solid;
+	border-radius: 1em 0;
+	margin-bottom: 100px;
+	width: 60%;
+	margin-left: 15%;
+}
+/*  =============================  */
+.miniature img, .miniature .nom, .miniature .short_description {
+	position: absolute;
+}
+.miniature .nom {
+	position: relative;
+	top: 1.8em;
+	left: 112px;
+	font-size: 1.2em;
+}
+.miniature .short_description {
+	top: 4.0em;
+	left: 120px;
+	font-family: Ubuntu;
+}
+
+
+
+/********************************************/
+
+/* ************* BIO ************ */
+.page_content > img {
+	border: #0e0816 solid;
+	position: relative;
+	right: -4em;
+}
+
+/*___________________________*/
+.page_content a {
+	color: #c00;
+	text-decoration: none;
+	font-family: Ubuntu;
+}
+.page_content a:hover, .page_content a:focus {
+	text-decoration: underline;
+}
+/*___________________________*/
+.short-bio {
+	float: left;
+	border: black solid;
+	box-shadow: -.7em .7em black;
+	box-sizing: border-box;
+	width: 40%;
+	padding: .5em 2em;
+	margin-right: 3em;
+	margin-bottom: 3em;
+	/* font-size: .8em; */
+}
+
+.short-bio dl {
+	font-size: .8em;
+}
+
+.short-bio h3 {
+	color: #2f4f4f;
+	font-weight: bold;
+	text-align: right;
+}
+/* .short-bio dd {
+	text-indent: -2em;
+}*/
+.short-bio ul {
+	padding: 0;
+	margin: 0;
+}
+.short-bio li {
+	list-style: circle;
+	list
+	list-style-position: outside;
+}
+.short-bio dt {
+	font-weight: bold;
+	margin-top: .8em;
+	border-top: dashed black 1px;
+}
+.short-bio dl>dt:first-of-type {
+	border-top: none;
+}
+.short-bio dd {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	/* list-style-position: inside; */
+}
+/*_____________________________*/
+.long-bio {
+	margin: 1%;
+	padding: 1%;
+	text-indent: 5%;
+}
+.long-bio h3 {
+	color: #2f4f4f;
+	margin-bottom: 0;
+	margin-top: 2em;
+}
+.long-bio p {
+	line-height: 1.6em;
+	font-size: 1.1em;
+}
+.long-bio h3+p:first-letter {
+	color: #0e0816;
+	font-size: 1.5em;
+	font-family: Ubuntu;
+}
+/*_______________________________*/
+/*********************************/
+
+#intro {
+	line-height: 1.6em;
+	font-size: 1.1em;
+	text-indent: 5%;
+	margin-bottom: 3em;
+	margin-top: 1em;
+}
+#intro #n1:first-letter {
+	color: #0e0816;
+	font-size: 1.5em;
+	font-family: Ubuntu;
+}

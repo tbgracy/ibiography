@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Archives | Par {{ section }}
+{% endblock %}
+
+{% block body %}
+    <h2>Archives</h2>
+
+    <ul class="archive-nav">
+        {% if section %}
+        <li class="{{ status[0]}}"><a href="alphabet">Par ordre alphabétique</a></li>
+        <li class="{{ status[1]}}"><a href="thematique">Par thématique</a></li>
+        <li class="{{ status[2]}}"><a href="pays">Par pays d'origine</a></li>
+        {% endif %}
+    </ul>
+
+    <ul>
+        {% if section == 'alphabet' %}
+            {% for result in results %}
+            <li class="miniature">
+                <a href="/biography/{{ result[1] }}"><img src="{{ url_for('static', filename='images/' + result[3]) }}" alt="404">
+                <span class="nom">{{ result[0] }}</span></a>
+                <span class="short_description">{{ result[2] }}</span>
+                <!-- {% for icone in icones %}
+                <ul class="icone">
+                    <li><img src="" alt=""></li>
+                </ul>
+                {% endfor %} -->
+            </li>
+            {% endfor %}
+        {% elif section == 'pays' %}
+            {% for p in pays %}
+            <h3 class="pays">{{ p }}</h3>
+                {% for result in results %}
+                    {% if result[4] == p %}
+                        <li class="miniature">
+                            <a href="/biography/{{ result[1] }}"><img src="{{ url_for('static', filename='images/' + result[3]) }}" alt="404">
+                            <span class="nom">{{ result[0] }}</span></a>
+                            <span class="short_description">{{ result[2] }}</span>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            <hr>
+            {% endfor %}
+        {% endif %}
+            
+    </ul>
+
+{% endblock %}

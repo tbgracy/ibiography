@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ results[0][1] }}
+{% endblock %}
+
+{% block body %}
+<h2>{{ results[0][1] }}</h2>
+<img src="{{ url_for('static', filename='images/' + results[0][7]) }}" alt="404">
+
+<div class="short-bio">
+    <h3>Resumé</h3>
+    <dl>
+        <dt>Naissance</dt> <dd>{{ results[0][5] }}</dd>
+        <dt>Décès</dt> <dd>{{ results[0][6] }}</dd>
+        <dt>Nom complet</dt> <dd>{{ results[0][1] }}</dd>
+        <dt>Nationalité</dt> <dd>{{ results[0][2] }}</dd>
+        <dt>Père</dt> <dd>{{ results[0][8] }}</dd>
+        <dt>Mère</dt> <dd>{{ results[0][9] }}</dd>
+        <dt>Site web</dt> <dd><a href="{{ results[0][10] }}}">{{ results[0][10] }}</a></dd>
+    </dl>
+</div>
+
+<div class="long-bio">
+    {{ results[0][3] }}
+</div>
+
+
+{% endblock %}
